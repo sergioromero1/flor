@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'orders/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'orders/style.css' %}">
+    <title>Ordenes actuales</title>
+</head>
+<body>
+    <header>
+        <h1>Ordenes actuales</h1>
+    </header>
+    <main>
+        {% if latest_orders_list %}
+        <ul>
+        {% for order in latest_orders_list  %}
+            <li><a href="">{{ order }}</a></li>
+        {% endfor %}
+        </ul>
+        {% else %}
+            <p>No orders are available.</p>
+        {% endif %}
+    </main>
+    <footer>
+        <a href="Sergio"></a>
+        <a href="#">Contacto 1</a>
+        <a href="#">Contacto 2</a>
+        <a href="#">Contacto 3</a>
+        <a href="#">Contacto 4</a>
+        <a href="#">Términos y condiciones</a>
+    </footer>
+
+</body>
+</html>
+
