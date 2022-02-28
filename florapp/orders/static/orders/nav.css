@@ -1,0 +1,28 @@
+nav {
+    text-align: left;
+}
+
+nav ul {
+    overflow: hidden;   /* without having given the element a set height, when you set overflow to hidden it takes on the height of the inner elements.*/
+    padding: 30px 0;
+    /* background: black; */
+}
+
+nav li{
+    float: left;
+}
+
+nav a {
+    display: inline;
+    font-size: 28px;
+    padding: 30px;
+}
+
+nav li:hover a{
+    background: black;
+    color: white;
+  }
+
+nav li:hover {
+    background: black;
+}

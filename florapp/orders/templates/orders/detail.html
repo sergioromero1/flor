@@ -1,0 +1,25 @@
+{% extends 'orders/base.html' %}
+
+{% block head_content %}
+<title>Orden {{order.id}}</title>
+{% endblock %}
+
+{% block container %}
+
+        
+    <header><h1> Orden {{order.id}}</h1></header>
+
+    {% if error_message %}
+        <p><strong> {{ error_message }}</strong></p>
+    {% endif %}
+    <main>
+        <p>Las unidades son : {{ order.units}}</p>
+        <p>El precio unitario es : {{ order.unit_price}}</p>
+        <p>Las observaciones son : {{ order.observations_text}}</p>
+        <p>La fecha de publicacion es : {{ order.pub_date}}</p> 
+
+    </main>
+    
+{% endblock%}
+
+

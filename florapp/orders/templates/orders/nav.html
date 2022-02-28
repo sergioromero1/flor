@@ -1,0 +1,20 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'orders/nav.css' %}">
+<nav>
+    <ul>
+        {# dashboard #}
+        <li>
+            <a href="{% url 'orders:index' %}"> Dashboard</a>
+        </li>
+
+        {# realizar pedido #}
+        <li>
+            <a href="">Realizar pedido</a>
+        </li>
+
+        {# logout #}
+        <li>
+            <a href="">Logout</a>
+        </li>
+    </ul>
+</nav>
