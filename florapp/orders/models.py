@@ -6,7 +6,7 @@ class Order(models.Model):
     units = models.IntegerField(default=0)
     unit_price = models.FloatField()
     observations_text = models.CharField(max_length=500)
-    pub_date = models.DateTimeField("date published")
+    pub_date = models.DateTimeField("date published",auto_now_add=True)
 
     def __str__(self):
         return 'Orden ' + str(self.pk)

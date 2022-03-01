@@ -1,5 +1,7 @@
 from django.views import generic
-from .models import  Order
+from django.urls import reverse_lazy
+from orders.models import  Order
+from orders.forms import OrderForm
 
 
 # Create your views here.
@@ -17,3 +19,14 @@ class DetailView(generic.DetailView):
 
     def get_queryset(self):
         return Order.objects.all()
+
+class CreateOrderView(generic.CreateView):
+    """Create new Order"""
+
+    form_class = OrderForm
+    success_url = reverse_lazy('orders:index')
+    template_name = 'orders/new.html'
+
+    def get_context_data(self, **kwargs):
+        return super().get_context_data(**kwargs)
+
