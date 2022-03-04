@@ -23,17 +23,8 @@ class DetailView(generic.DetailView):
 class CreateOrderView(generic.CreateView):
     """Create new Order"""
 
-    model = Order
     form_class = OrderForm
     success_url = reverse_lazy('orders:index')
     template_name = 'orders/new.html'
 
-    # def get_context_data(self, **kwargs):
-    #     return super().get_context_data(**kwargs)
 
-
-
-# def get_queryset(self):
-#     queryset = Sample.objects.filter(submitted_by=self.request.user.id)
-#     queryset1 = Sample.objects.filter(submitted_by!=self.request.user.id) 
-#     return chain(queryset, queryset1)

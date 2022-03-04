@@ -14,9 +14,6 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = ['flower','units', 'observations_text']
 
-    units = forms.IntegerField()
-    observations_text = forms.CharField()
-
     flower = forms.ModelChoiceField(
         queryset = Flower.objects.all(), 
         empty_label = None,
