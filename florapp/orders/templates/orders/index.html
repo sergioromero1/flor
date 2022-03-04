@@ -13,7 +13,12 @@
         {% if latest_orders_list %}
         <ul class="ul_index">
         {% for order in latest_orders_list  %}
-            <li class="li_index"><a href="{% url 'orders:detail' order.id %}">{{ order }}</a></li>
+            <li class="li_index">
+                <a href="{% url 'orders:detail' order.id %}">
+                    {{ order }}<br>
+                    <p>{{order.units}} unidades de {{order.flower.name}}</p>
+                </a>
+            </li>
         {% endfor %}
         </ul>
         {% else %}

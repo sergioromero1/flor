@@ -13,8 +13,8 @@
         <p><strong> {{ error_message }}</strong></p>
     {% endif %}
     <main>
-        <p>Las unidades son : {{ order.units}}</p>
-        <p>El precio unitario es : {{ order.unit_price}}</p>
+        <p>{{ order.units}} Unidades</p>
+        <p>Flor: {{ order.flower.name}}</p>
         <p>Las observaciones son : {{ order.observations_text}}</p>
         <p>La fecha de publicacion es : {{ order.pub_date}}</p> 
 

@@ -3,7 +3,7 @@ from django import forms
 
 # models
 
-from orders.models import Order
+from orders.models import Flower, Order
 
 class OrderForm(forms.ModelForm):
     """Order model form"""
@@ -12,4 +12,12 @@ class OrderForm(forms.ModelForm):
         """Form settings"""
 
         model = Order
-        fields = ['units', 'unit_price', 'observations_text']
+        fields = ['flower','units', 'observations_text']
+
+    units = forms.IntegerField()
+    observations_text = forms.CharField()
+
+    flower = forms.ModelChoiceField(
+        queryset = Flower.objects.all(), 
+        empty_label = None,
+    )

@@ -1,4 +1,5 @@
 {% extends 'orders/base.html' %}
+{% load static %}
 
 {% block head_content %}
 <title>Nueva orden</title>
@@ -12,22 +13,28 @@
     {% if error_message %}
         <p><strong> {{ error_message }}</strong></p>
     {% endif %}
+    <link rel="stylesheet" href="{% static 'orders/new.css' %}">
     <main>
-        <form method="POST" enctype="multipart/form-data">
+       <form method="POST" enctype="multipart/form-data">
 
             {% csrf_token %}
 
-            {# Units field #}
-            <input type="text" name="units" placeholder="unidades">
+            {# Flower #}
+            <select name="flower" class="input_select">
+            {% for flower1 in form.flower %}
+                {{flower1}}
+            {% endfor  %}
+            </select>
+            
 
-            {# Unit price #}
-            <input type="text" name="unit_price" placeholder="precio unitario">
+            {# Units #}
+            <input type="text" class="input_text" name="units" placeholder="Unidades">
 
             {# observation_text field #}
-            <input type="text" name="observations_text" placeholder="observaciones">
-
-            <button type="submit">Aceptar</button>
-        </form>
+            <input type="text" class="input_text" name="observations_text" placeholder="Observaciones">
+            
+            <input type="submit" class="input_submit" value="Aceptar"> 
+        </form> 
     </main>
     
 {% endblock%}
