@@ -17,6 +17,15 @@ class SignUpForm(forms.Form):
             raise forms.ValidationError('El username ya existe')
         return username
 
+    def clean_email(self):
+        """email must be unique"""
+
+        email = self.cleaned_data['email']
+        email_taken = User.objects.filter(email=email).exists()
+        if email_taken:
+            raise forms.ValidationError('El email ya esta registrado')
+        return email
+
     def clean(self):
         data = super().clean()
 
