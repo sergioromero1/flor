@@ -12,7 +12,7 @@
     {% if error_message %}
         <p><strong> {{ error_message }}</strong></p>
     {% endif %}
-    
+
     <link rel="stylesheet" href="{% static 'users/signup.css' %}">
     <form method= "POST" action="{% url 'users:signup'%}">
 
@@ -20,10 +20,13 @@
 
 
         <input type="text" class="input_text" name="username" maxlength="15" minlength="4" placeholder="Username" required="" id="id_username"><br>
+        {{form.errors.username}}
         <input type="email" class="input_text" name="email" maxlength="50" minlength="6" placeholder="Email" required="" id="id_email"><br>
+        {{form.errors.email}}
         <input type="password" class="input_text" name="password" maxlength="70" placeholder="Password" required="" id="id_password"><br>
+        {{form.errors.password}}
         <input type="password" class="input_text" name="password_confirmation" maxlength="70" placeholder="Password confirmation" required="" id="id_password_confirmation"><br><br> 
-
+        {{form.errors.password_confirmation}}
         <input type="submit" class="input_submit" value="Registrarme!">
 
     </form>
