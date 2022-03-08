@@ -8,6 +8,11 @@
 {% block container %}
 
     <header><h1>Registrate</h1></header>
+
+    {% if error_message %}
+        <p><strong> {{ error_message }}</strong></p>
+    {% endif %}
+    
     <link rel="stylesheet" href="{% static 'users/signup.css' %}">
     <form method= "POST" action="{% url 'users:signup'%}">
 
