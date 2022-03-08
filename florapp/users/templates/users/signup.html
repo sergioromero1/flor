@@ -13,10 +13,11 @@
 
         {% csrf_token %}
 
-        <input type="text" class="input_text" name="username" maxlength="15" minlength="4" placeholder="Username" id="id_username"><br>
-        <input type="email" class="input_text" name="email" maxlength="50" minlength="6" placeholder="Email" id="id_email"><br>
-        <input type="password" class="input_text" name="password" maxlength="70" placeholder="Password" id="id_password"><br>
-        <input type="password" class="input_text" name="password_confirmation" maxlength="70" placeholder="Password confirmation" id="id_password_confirmation"><br><br>
+
+        <input type="text" class="input_text" name="username" maxlength="15" minlength="4" placeholder="Username" required="" id="id_username"><br>
+        <input type="email" class="input_text" name="email" maxlength="50" minlength="6" placeholder="Email" required="" id="id_email"><br>
+        <input type="password" class="input_text" name="password" maxlength="70" placeholder="Password" required="" id="id_password"><br>
+        <input type="password" class="input_text" name="password_confirmation" maxlength="70" placeholder="Password confirmation" required="" id="id_password_confirmation"><br><br> 
 
         <input type="submit" class="input_submit" value="Registrarme!">
 

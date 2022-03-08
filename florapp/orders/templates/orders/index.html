@@ -15,7 +15,7 @@
         {% for order in latest_orders_list  %}
             <li class="li_index">
                 <a href="{% url 'orders:detail' order.id %}">
-                    Orden {{ forloop.counter }}<br>
+                    Orden #{{ order.id }}<br>
                     <p>{{order.units}} unidades de {{order.flower.name}}</p>
                 </a>
             </li>

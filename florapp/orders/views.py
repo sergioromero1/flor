@@ -21,7 +21,9 @@ class DetailView(LoginRequiredMixin,generic.DetailView):
     template_name = "orders/detail.html"
 
     def get_queryset(self):
-        return Order.objects.all()
+        user = self.request.user 
+        qs = user.order_set
+        return Order.objects.filter(user=user)
 
 class CreateOrderView(LoginRequiredMixin, generic.CreateView):
     """Create new Order"""
