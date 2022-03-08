@@ -1,0 +1,16 @@
+from orders.models import Flower, Order
+f = Flower(name='Rosa',color='Rojo', unit_price=200)
+f2 = Flower(name='Tulipan',color='Azul', unit_price=400)
+f.save()
+f2.save()
+f3 = Flower(name='Clavel',color='Rosado', unit_price=200)
+f4 = Flower(name='Girasol',color='Amarillo', unit_price=300)
+f3.save()
+f4.save()
+o = Order(flower= f, units=1, observations_text='gracias')
+o.save()
+
+
+passwd sergio mexico1
+
+passwd karla  mexico12345

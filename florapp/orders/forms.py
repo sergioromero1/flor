@@ -12,7 +12,7 @@ class OrderForm(forms.ModelForm):
         """Form settings"""
 
         model = Order
-        fields = ['flower','units', 'observations_text']
+        fields = ['user','flower','units', 'observations_text']
 
     flower = forms.ModelChoiceField(
         queryset = Flower.objects.all(), 
