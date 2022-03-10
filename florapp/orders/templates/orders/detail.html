@@ -13,10 +13,14 @@
         <p><strong> {{ error_message }}</strong></p>
     {% endif %}
     <main>
-        <p>{{ order.units}} Unidades</p>
-        <p>Flor: {{ order.flower.name}}</p>
-        <p>Las observaciones son : {{ order.observations_text}}</p>
-        <p>La fecha de publicacion es : {{ order.pub_date}}</p> 
+        <fieldset class="detail">
+            <p>Unidades: {{ order.units}}</p><br>
+            <p>Flor: {{ order.flower.name}}</p><br>
+            <p>Fecha de solicitud: {{ order.pub_date}}</p><br>
+            <p>Observaciones:   {{ order.observations_text}} </p>
+            
+        </fieldset>
+        
 
     </main>
     
