@@ -7,9 +7,11 @@ f3 = Flower(name='Clavel',color='Rosado', unit_price=200)
 f4 = Flower(name='Girasol',color='Amarillo', unit_price=300)
 f3.save()
 f4.save()
+
 o = Order(flower= f, units=1, observations_text='gracias')
 o.save()
 
+carlos, juan, karla
 
 passwd sergio mexico1
 

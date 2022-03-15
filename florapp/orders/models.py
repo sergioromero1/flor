@@ -17,6 +17,7 @@ class Order(models.Model):
     flower = models.ForeignKey(Flower,on_delete=models.PROTECT)
     units = models.IntegerField(default=0)
     observations_text = models.CharField(max_length=500)
+    status = models.CharField(max_length=30, choices=[('Activo','Activo'),('Cancelado','Cancelado'),('Despachado','Despachado'),('Entregado','Entregado')], default='Activo')
     pub_date = models.DateTimeField("date published",auto_now_add=True)
 
     def __str__(self):
