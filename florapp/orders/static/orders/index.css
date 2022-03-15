@@ -17,13 +17,16 @@
     display: inline;
     font-size: 18px;
     padding: 20px;
+    margin-inline: 3px;
 }
 
-.nav_menu li:hover a{
+.nav_menu li a:hover {
     background: black;
     color: white;
   }
 
-.nav_menu li:hover {
+
+.todas, .Activo, .Cancelado, .Despachado, .Entregado a{
     background: black;
+    color: white;
 }

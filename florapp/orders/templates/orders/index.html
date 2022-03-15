@@ -11,13 +11,19 @@
     <nav class="nav_menu">
         <ul>
             <li>
-                <a href="{% url 'orders:index' %}"> Activas</a>
-            </li>
-            <li >
-                <a href="{% url 'orders:index' %}">Canceladas</a>
+                <a class="{{ context.Activo }}" href="{% url 'orders:index' 'Activo' %}"> Activas</a>
             </li>
             <li>
-                <a href="{% url 'orders:index' %}">Entregadas</a>
+                <a class="{{ context.Cancelado }}" href="{% url 'orders:index' 'Cancelado' %}">Canceladas</a>
+            </li>
+            <li>
+                <a class="{{ context.Despachado }}" href="{% url 'orders:index' 'Despachado' %}">Despachadas</a>
+            </li>
+            <li>
+                <a class="{{ context.Entregado }}" href="{% url 'orders:index' 'Entregado' %}">Entregadas</a>
+            </li>
+            <li>
+                <a class="{{ context.todas }}" href="{% url 'orders:index' %}">Todas</a>
             </li>
         </ul>
     </nav>
@@ -25,10 +31,10 @@
     <br>
     <main>
         
-        {% if latest_orders_list %}
+        {% if context.latest_orders_list %}
         
             <ul class="ul_index">
-            {% for order in latest_orders_list  %}
+            {% for order in context.latest_orders_list  %}
                 <fieldset>
                     <li class="li_index">
                         <a href="{% url 'orders:detail' order.id %}">

@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -9,12 +10,20 @@ from orders.forms import OrderForm
 
 class IndexView(LoginRequiredMixin,generic.ListView):
     template_name = "orders/index.html"
-    context_object_name = "latest_orders_list"
+    context_object_name = "context"
 
     def get_queryset(self):
         """Return the last  published orders"""
-        user = self.request.user    
-        return Order.objects.filter(user=user)
+        user = self.request.user
+        context = {}
+        context['latest_orders_list'] = Order.objects.filter(user=user)
+        if 'status' in self.kwargs:
+            status = self.kwargs['status']
+            context[f'{status}'] = status
+            context['latest_orders_list'] =Order.objects.filter(user=user).filter(status=status)
+            return context
+        context['todas'] = 'todas'
+        return context
 
 class DetailView(LoginRequiredMixin,generic.DetailView):
     model = Order
@@ -22,7 +31,6 @@ class DetailView(LoginRequiredMixin,generic.DetailView):
 
     def get_queryset(self):
         user = self.request.user 
-        qs = user.order_set
         return Order.objects.filter(user=user)
 
 class CreateOrderView(LoginRequiredMixin, generic.CreateView):
