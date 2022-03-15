@@ -1,28 +1,29 @@
-.nav {
-    text-align: left;
+.nav_menu {
+    text-align: center;
 }
 
-.nav ul {
+.nav_menu ul{
     overflow: hidden;   /* without having given the element a set height, when you set overflow to hidden it takes on the height of the inner elements.*/
     padding: 20px 0;
+    display: inline-block;
     /* background: black; */
 }
 
-.nav li{
+.nav_menu li{
     float: left;
 }
 
-.nav a {
+.nav_menu a {
     display: inline;
-    font-size: 22px;
+    font-size: 18px;
     padding: 20px;
 }
 
-.nav li:hover a{
+.nav_menu li:hover a{
     background: black;
     color: white;
   }
 
-.nav li:hover {
+.nav_menu li:hover {
     background: black;
 }

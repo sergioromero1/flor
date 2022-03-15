@@ -1,13 +1,28 @@
 {% extends 'orders/base.html' %}
+{% load static %}
 
 {% block head_content %}
 <title>Listado de Ordenes</title>
 {% endblock %}
 
 {% block container %}
-
+    <link rel="stylesheet" href="{% static 'orders/index.css' %}">
     <header><h1>Listado de Ordenes</h1></header>
-     
+    <nav class="nav_menu">
+        <ul>
+            <li>
+                <a href="{% url 'orders:index' %}"> Activas</a>
+            </li>
+            <li >
+                <a href="{% url 'orders:index' %}">Canceladas</a>
+            </li>
+            <li>
+                <a href="{% url 'orders:index' %}">Entregadas</a>
+            </li>
+        </ul>
+    </nav>
+    <br>
+    <br>
     <main>
         
         {% if latest_orders_list %}
