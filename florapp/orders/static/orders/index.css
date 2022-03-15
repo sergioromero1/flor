@@ -26,7 +26,8 @@
   }
 
 
-.todas, .Activo, .Cancelado, .Despachado, .Entregado a{
+.todas, .Activo, .Cancelado, .Despachado,.Entregado, .uno a{
     background: black;
     color: white;
 }
+
