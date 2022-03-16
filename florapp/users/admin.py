@@ -20,6 +20,10 @@ class UserAdmin(BaseUserAdmin):
         'email'
     )
 
+    list_display_links = None
+
+    readonly_fields = ('username','first_name','last_name','email')
+
 
 admin.site.register(User,UserAdmin)
 

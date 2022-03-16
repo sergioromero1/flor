@@ -7,14 +7,14 @@
 
 {% block container %}
     
+    <header><h1>Ingresa</h1></header>
+
     {% if form.errors %}
 
-        <p>
-            {{form.errors}}
-        </p>
-       
+        <p style="color:red"><strong>{{form.non_field_errors}}</strong></p>
+        <br>
+            
     {%endif%}
-    <header><h1>Ingresa</h1></header>
 
     <link rel="stylesheet" href="{% static 'orders/new.css' %}">
     <form method="POST" action="{% url 'users:login' %}">

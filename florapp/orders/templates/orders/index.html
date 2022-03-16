@@ -11,6 +11,9 @@
     <nav class="nav_menu">
         <ul>
             <li>
+                <a class="{{ context.todas }}" href="{% url 'orders:index' %}">Todas</a>
+            </li>
+            <li>
                 <a class="{{ context.Activo }}" href="{% url 'orders:index' 'Activo' %}"> Activas</a>
             </li>
             <li>
@@ -22,13 +25,9 @@
             <li>
                 <a class="{{ context.Entregado }}" href="{% url 'orders:index' 'Entregado' %}">Entregadas</a>
             </li>
-            <li>
-                <a class="{{ context.todas }}" href="{% url 'orders:index' %}">Todas</a>
-            </li>
+            
         </ul>
     </nav>
-    <br>
-    <br>
     <main>
         
         {% if context.latest_orders_list %}
@@ -43,7 +42,6 @@
                         </a>
                     </li>
                 </fieldset>
-                <br><br> 
             {% endfor %}
             </ul>
          

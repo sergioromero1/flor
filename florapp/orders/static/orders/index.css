@@ -4,7 +4,7 @@
 
 .nav_menu ul{
     overflow: hidden;   /* without having given the element a set height, when you set overflow to hidden it takes on the height of the inner elements.*/
-    padding: 20px 0;
+    padding: 20px 0px 40px;
     display: inline-block;
     /* background: black; */
 }
@@ -24,7 +24,6 @@
     background: black;
     color: white;
   }
-
 
 .todas, .Activo, .Cancelado, .Despachado,.Entregado, .uno a{
     background: black;
