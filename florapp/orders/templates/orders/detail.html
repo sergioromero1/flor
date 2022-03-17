@@ -1,12 +1,13 @@
 {% extends 'orders/base.html' %}
+{% load static %}
 
 {% block head_content %}
 <title>Orden {{order.id}}</title>
 {% endblock %}
 
 {% block container %}
-
-        
+    <link rel="stylesheet" href="{% static 'orders/detail.css' %}">
+  
     <header><h1> Orden #{{order.id}}</h1></header>
 
     {% if error_message %}
@@ -14,10 +15,10 @@
     {% endif %}
     <main>
         <fieldset class="detail">
-            <p>Unidades: {{ order.units}}</p><br>
-            <p>Flor: {{ order.flower.name}}</p><br>
-            <p>Fecha de solicitud: {{ order.pub_date}}</p><br>
-            <p>Observaciones:   {{ order.observations_text}} </p><br>
+            <p>Unidades: {{ order.units}}</p>
+            <p>Flor: {{ order.flower.name}}</p>
+            <p>Fecha de solicitud: {{ order.pub_date}}</p>
+            <p>Observaciones:   {{ order.observations_text}} </p>
             <p>Estado:  {{ order.status}} </p>
             
         </fieldset>

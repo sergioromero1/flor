@@ -25,6 +25,22 @@
     color: white;
   }
 
+.ul_index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.li_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    padding: 50px;
+    width: 500px;
+}
+
 .todas, .Activo, .Cancelado, .Despachado,.Entregado, .uno a{
     background: black;
     color: white;

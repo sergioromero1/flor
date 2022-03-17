@@ -27,32 +27,5 @@ fieldset {
     text-align: center;
     border: 1px solid black;
     justify-content: center;
+    margin: 20px 0px;
 }
-
-
-.ul_index{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.li_index {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
-    font-size: 28px;
-    padding: 50px;
-    width: 500px;
-    margin: 10px 0px 20px;
-}
-
-.detail{
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    text-align: left;
-}
-
