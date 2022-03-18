@@ -1,3 +1,4 @@
+import re
 from django import forms
 from users.models import User
 
@@ -15,6 +16,10 @@ class SignUpForm(forms.Form):
         username_taken = User.objects.filter(username=username).exists()
         if username_taken:
             raise forms.ValidationError('El username ya existe')
+        pattern = "^[A-Za-z0-9_]*$"
+        valid = bool(re.match(pattern, username))
+        if not valid:
+            raise forms.ValidationError("El username solo puede contener letras A-z, numeros 0-9 y _")
         return username
 
     def clean_email(self):

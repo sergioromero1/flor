@@ -3,8 +3,9 @@ from django.views import generic
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.urls import reverse_lazy
-from orders.models import  Flower, Order
+from orders.models import Order
 from orders.forms import OrderForm
+from django.shortcuts import render
 
 
 
@@ -45,4 +46,8 @@ class CreateOrderView(LoginRequiredMixin, generic.CreateView):
         context['user'] = self.request.user
         return context
 
+def prueba(request):
+    return render(request,"orders/prueba.html")
 
+def prueba2(request):
+    return render(request,"orders/prueba2.html")
