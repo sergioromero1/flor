@@ -12,6 +12,7 @@
 .nav_menu li{
     /* float: left; */
     display: inline-block;
+    margin-bottom: 20px;
 }
 
 .nav_menu a {
