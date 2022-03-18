@@ -10,7 +10,8 @@
 }
 
 .nav_menu li{
-    float: left;
+    /* float: left; */
+    display: inline-block;
 }
 
 .nav_menu a {
