@@ -20,7 +20,7 @@
                 <a class="{{ context.Cancelado }}" href="{% url 'orders:index' 'Cancelado' %}">Canceladas</a>
             </li>
             <li>
-                <a class="{{ context.Despachado }}" href="{% url 'orders:index' 'Despachado' %}">Despachadas</a>
+                {% comment %} <a class="{{ context.Despachado }}" href="{% url 'orders:index' 'Despachado' %}">Despachadas</a> {% endcomment %}
             </li>
             <li>
                 <a class="{{ context.Entregado }}" href="{% url 'orders:index' 'Entregado' %}">Entregadas</a>
