@@ -17,12 +17,7 @@
     margin: 20px 0px;
 }
 
-.nav_menu a {
-    display: inline;
-    font-size: 16px;
-    padding: 20px;
-    margin-inline: 3px;
-}
+
 
 .nav_menu li a:hover {
     background: black;
@@ -50,3 +45,21 @@
     color: white;
 }
 
+@media all and (min-width: 900px) { 
+    .nav_menu a {
+        display: inline;
+        font-size: 18px;
+        padding: 20px;
+        margin-inline: 5px;
+    }
+    
+    }
+
+@media all and (max-width: 500px) { 
+    .nav_menu a {
+        display: inline;
+        font-size: 14px;
+        padding: 20px;
+        margin-inline: 5px;
+    }
+}
