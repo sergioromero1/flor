@@ -10,7 +10,7 @@ from django.shortcuts import render
 
 
 class IndexView(LoginRequiredMixin,generic.ListView):
-    template_name = "orders/index.html"
+    template_name = "orders/index2.html"
     context_object_name = "context"
 
     def get_queryset(self):
@@ -51,3 +51,6 @@ def prueba(request):
 
 def prueba2(request):
     return render(request,"orders/prueba2.html")
+
+def prueba3(request):
+    return render(request,"orders/shop.html")
