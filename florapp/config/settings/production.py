@@ -2,7 +2,7 @@ from .base import *  # NOQA
 from .base import env
 
 # Base
-ALLOWED_HOSTS = ['.rulesnotfound.com']
+ALLOWED_HOSTS = ['.arisdistribuidora.com']
 
 # Databases
 
