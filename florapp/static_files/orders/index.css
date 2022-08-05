@@ -1,0 +1,63 @@
+.nav_menu {
+    text-align: center;
+}
+
+.nav_menu ul{
+    overflow: hidden;   /* without having given the element a set height, when you set overflow to hidden it takes on the height of the inner elements.*/
+    padding: 20px 0px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: black; */
+}
+
+.nav_menu li{
+    /* float: left; */
+    display: inline-block;
+    margin: 20px 0px;
+}
+
+.nav_menu li a:hover {
+    background: black;
+    color: white;
+  }
+
+.ul_index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.li_index {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    padding: 50px;
+    width: 500px;
+}
+
+.todas, .Activo, .Cancelado, .Despachado,.Entregado, .uno a{
+    background: black;
+    color: white;
+}
+
+@media all and (min-width: 900px) { 
+    .nav_menu a {
+        display: inline;
+        font-size: 18px;
+        padding: 20px;
+        margin-inline: 5px;
+    }
+    
+    }
+
+@media all and (max-width: 500px) { 
+    .nav_menu a {
+        display: inline;
+        font-size: 14px;
+        padding: 20px;
+        margin-inline: 5px;
+    }
+}

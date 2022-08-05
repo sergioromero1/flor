@@ -1,0 +1,32 @@
+.input_select {
+    /* position: absolute; */
+    margin:10px auto 20px auto;
+    box-sizing: border-box;
+    /* border:1px solid #d9d9d9; */
+    height:42px;
+    overflow: hidden;
+    width: 220px;
+    position:relative;
+}
+
+select.input_select option.option1{
+    background-color: #007700;
+}
+
+.input_submit {
+    background-color: #04AA6D;
+    border: none;
+    color: white;
+    padding: 14px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.input_text {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+
