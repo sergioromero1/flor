@@ -46,6 +46,9 @@ class CreateOrderView(LoginRequiredMixin, generic.CreateView):
         context['user'] = self.request.user
         return context
 
+def load_index(request):
+    return render(request,"orders/index.html")
+
 def prueba(request):
     return render(request,"orders/prueba.html")
 
