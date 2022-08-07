@@ -54,22 +54,22 @@
                         <nav class="main-nav d-none d-lg-flex">
                             <ul class="nav">
                                 <li>
-                                    <a class="active" href="index.html">
+                                    <a class="active" href="{% url 'index' %}">
                                         <span class="menu-text"> Home</span>
-                                        <i class="fa fa-angle-down"></i>
+                                        {% comment %} <i class="fa fa-angle-down"></i> {% endcomment %}
                                     </a>
-                                    <ul class="dropdown-submenu dropdown-hover">
+                                    {% comment %} <ul class="dropdown-submenu dropdown-hover">
                                         <li><a class="active" href="index.html">Home Page - 1</a></li>
                                         <li><a href="index-2.html">Home Page - 2</a></li>
                                         <li><a href="index-3.html">Home Page - 3</a></li>
-                                    </ul>
+                                    </ul> {% endcomment %}
                                 </li>
                                 <li>
-                                    <a href="shop.html">
+                                    <a href="{% url 'orders:shop' %}">
                                         <span class="menu-text">Shop</span>
-                                        <i class="fa fa-angle-down"></i>
+                                        {% comment %} <i class="fa fa-angle-down"></i> {% endcomment %}
                                     </a>
-                                    <div class="mega-menu dropdown-hover">
+                                    {% comment %} <div class="mega-menu dropdown-hover">
                                         <div class="menu-colum">
                                             <ul>
                                                 <li><span class="mega-menu-text">Shop</span></li>
@@ -100,7 +100,7 @@
                                                 <li><a href="wishlist.html">Wishlist Page</a></li>
                                             </ul>
                                         </div>
-                                    </div>
+                                    </div> {% endcomment %}
                                 </li>
                                 <li>
                                     <a href="blog-details-fullwidth.html">

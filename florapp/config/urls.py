@@ -18,7 +18,7 @@ from django.urls import path, include
 from orders import views
 
 urlpatterns = [
-    path('', views.load_index),
+    path('', views.load_index, name='index'),
     path('admin/', admin.site.urls),
     path('orders/', include("orders.urls")),
     path('users/', include("users.urls"))
