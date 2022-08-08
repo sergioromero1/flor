@@ -55,8 +55,20 @@ def load_aboutus(request):
 def load_blog(request):
     return render(request,"orders/blog.html")
 
+def load_cart(request):
+    return render(request,"orders/cart.html")
+
+def load_checkout(request):
+    return render(request,"orders/checkout.html")
+
+def load_compare(request):
+    return render(request,"orders/compare.html")
+
 def load_contactus(request):
     return render(request,"orders/contact-us.html")
+
+def load_error_404(request, exception):
+    return render(request,"orders/error-404.html",status=404)
 
 def load_faq(request):
     return render(request,"orders/frequently-questions.html")
@@ -64,11 +76,17 @@ def load_faq(request):
 def load_login(request):
     return render(request,"orders/login.html")
 
+def load_myaccount(request):
+    return render(request,"orders/my-account.html")
+
 def load_register(request):
     return render(request,"orders/register.html")
 
-def load_myaccount(request):
-    return render(request,"orders/my-account.html")
+def load_shop(request):
+    return render(request,"orders/shop.html")
+
+def load_whislist(request):
+    return render(request,"orders/error-404.html")
 
 def prueba(request):
     return render(request,"orders/prueba.html")
@@ -76,5 +94,4 @@ def prueba(request):
 def prueba2(request):
     return render(request,"orders/prueba2.html")
 
-def prueba3(request):
-    return render(request,"orders/shop.html")
+

@@ -13,6 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from cgitb import handler
 from django.contrib import admin
 from django.urls import path, include
 from orders import views
@@ -20,14 +21,22 @@ from orders import views
 urlpatterns = [
     path('', views.load_index, name='index'),
     path('about-us/', views.load_aboutus, name='about_us'),
-    path('contact-us/', views.load_contactus, name='contact_us'),
     path('blog/', views.load_blog, name='blog'),
+    path('cart/', views.load_cart, name='cart'),
+    path('checkout/', views.load_checkout, name='checkout'),
+    path('compare/', views.load_compare, name='compare'),
+    path('contact-us/', views.load_contactus, name='contact_us'),
+    path('error-404/', views.load_error_404, name='error-404'),
     path('FAQ/', views.load_faq, name='faq'),
     path('login/', views.load_login, name='login'),
-    path('register/', views.load_register, name='register'),
     path('my_account/', views.load_myaccount, name='my_account'),
+    path('register/', views.load_register, name='register'),
+    path("shop/",views.load_shop, name="shop"),
+    path('whislist/', views.load_whislist, name='whislist'),
     path('admin/', admin.site.urls),
     path('orders/', include("orders.urls")),
     path('users/', include("users.urls"))
 
 ]
+
+handler404 = "orders.views.load_error_404"
