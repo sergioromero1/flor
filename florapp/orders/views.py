@@ -49,6 +49,18 @@ class CreateOrderView(LoginRequiredMixin, generic.CreateView):
 def load_index(request):
     return render(request,"orders/index.html")
 
+def load_aboutus(request):
+    return render(request,"orders/about-us.html")
+
+def load_blog(request):
+    return render(request,"orders/blog.html")
+
+def load_contactus(request):
+    return render(request,"orders/contact-us.html")
+
+def load_faq(request):
+    return render(request,"orders/frequently-questions.html")
+
 def prueba(request):
     return render(request,"orders/prueba.html")
 

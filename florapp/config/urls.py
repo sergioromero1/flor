@@ -19,6 +19,10 @@ from orders import views
 
 urlpatterns = [
     path('', views.load_index, name='index'),
+    path('about-us/', views.load_aboutus, name='about_us'),
+    path('contact-us/', views.load_contactus, name='contact_us'),
+    path('blog/', views.load_blog, name='blog'),
+    path('FAQ/', views.load_faq, name='faq'),
     path('admin/', admin.site.urls),
     path('orders/', include("orders.urls")),
     path('users/', include("users.urls"))

@@ -1,25 +1,83 @@
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'orders/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'orders/styles.css' %}">
-    {% block head_content %}{% endblock %}
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>FloSun - Flower Shop HTML5 Template</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'orders/assets/images/favicon.ico' %}">
+
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/vendor/bootstrap.min.css' %}">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/vendor/font.awesome.min.css' %}">
+    <!-- Linear Icons CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/vendor/linearicons.min.css' %}">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/plugins/swiper-bundle.min.css' %}">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/plugins/animate.min.css' %}">
+    <!-- Jquery ui CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/plugins/jquery-ui.min.css' %}">
+    <!-- Nice Select CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/plugins/nice-select.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/plugins/magnific-popup.css' %}">
+
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="{% static 'orders/assets/css/style.css' %}">
+
 </head>
+
 <body>
-    {% include "orders/nav.html" %}
-    {% comment %} {% include "orders/nav.html" %} {% endcomment %}
 
-    
+ 
+    {% include "orders/header.html" %}
+
     {% block container %}{% endblock%}
+    
+    {% include "orders/footer.html" %}
 
-    <footer>
-        {% comment %} <a href="#">Contacto 1</a>
-        <a href="#">Contacto 2</a>
-        <a href="#">Términos y condiciones</a> {% endcomment %}
-    </footer>
+    {% block container2 %}{% endblock%}
+    
+
+    <!-- JS
+    ============================================ -->
+
+    <!-- jQuery JS -->
+    <script src="{% static 'orders/assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+    <!-- jQuery Migrate JS -->
+    <script src="{% static 'orders/assets/js/vendor/jquery-migrate-3.3.2.min.js' %}"></script>
+    <!-- Modernizer JS -->
+    <script src="{% static 'orders/assets/js/vendor/modernizr-3.7.1.min.js' %}"></script>
+    <!-- Bootstrap JS -->
+    <script src="{% static 'orders/assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Swiper Slider JS -->
+    <script src="{% static 'orders/assets/js/plugins/swiper-bundle.min.js' %}"></script>
+    <!-- nice select JS -->
+    <script src="{% static 'orders/assets/js/plugins/nice-select.min.js' %}"></script>
+    <!-- Ajaxchimpt js -->
+    <script src="{% static 'orders/assets/js/plugins/jquery.ajaxchimp.min.js' %}"></script>
+    <!-- Jquery Ui js -->
+    <script src="{% static 'orders/assets/js/plugins/jquery-ui.min.js' %}"></script>
+    <!-- Jquery Countdown js -->
+    <script src="{% static 'orders/assets/js/plugins/jquery.countdown.min.js' %}"></script>
+    <!-- jquery magnific popup js -->
+    <script src="{% static 'orders/assets/js/plugins/jquery.magnific-popup.min.js' %}"></script>
+
+    <!-- Main JS -->
+    <script src="{% static 'orders/assets/js/main.js' %}"></script>
+
+
+
 </body>
+
 </html>
