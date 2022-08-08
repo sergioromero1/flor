@@ -65,11 +65,11 @@
                                 </div> {% endcomment %}
                             </li>
                             <li>
-                                <a href="blog-details-fullwidth.html">
+                                <a href="{% url 'blog' %}">
                                     <span class="menu-text"> Blog</span>
-                                    <i class="fa fa-angle-down"></i>
+                                    {% comment %} <i class="fa fa-angle-down"></i> {% endcomment %}
                                 </a>
-                                <ul class="dropdown-submenu dropdown-hover">
+                                {% comment %} <ul class="dropdown-submenu dropdown-hover">
                                     <li><a href="blog.html">Blog Left Sidebar</a></li>
                                     <li><a href="blog-list-right-sidebar.html">Blog List Right Sidebar</a></li>
                                     <li><a href="blog-list-fullwidth.html">Blog List Fullwidth</a></li>
@@ -78,7 +78,7 @@
                                     <li><a href="blog-grid-fullwidth.html">Blog Grid Fullwidth</a></li>
                                     <li><a href="blog-details-sidebar.html">Blog Details Sidebar</a></li>
                                     <li><a href="blog-details-fullwidth.html">Blog Details Fullwidth</a></li>
-                                </ul>
+                                </ul> {% endcomment %}
                             </li>
                             <li>
                                 <a href="#">
@@ -87,10 +87,10 @@
                                 </a>
                                 <ul class="dropdown-submenu dropdown-hover">
                                     <li><a href="{% url 'contact_us' %}">Contact</a></li>
-                                    <li><a href="my-account.html">My Account</a></li>
+                                    <li><a href="{% url 'my_account' %}">My Account</a></li>
                                     <li><a href="{% url 'faq' %}">FAQ</a></li>
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
+                                    <li><a href="{% url 'register' %}">Register</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -271,8 +271,8 @@
                             <li class="menu-item-has-children "><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="{% url 'faq' %}">FAQ</a></li>
-                                    <li><a href="my-account.html">My Account</a></li>
-                                    <li><a href="login-register.html">login &amp; register</a></li>
+                                    <li><a href="{% url 'my_account' %}">My Account</a></li>
+                                    <li><a href="{% url 'register' %}">login &amp; register</a></li>
                                 </ul>
                             </li>
                             <li><a href="{% url 'about_us' %}">About Us</a></li>

@@ -61,6 +61,15 @@ def load_contactus(request):
 def load_faq(request):
     return render(request,"orders/frequently-questions.html")
 
+def load_login(request):
+    return render(request,"orders/login.html")
+
+def load_register(request):
+    return render(request,"orders/register.html")
+
+def load_myaccount(request):
+    return render(request,"orders/my-account.html")
+
 def prueba(request):
     return render(request,"orders/prueba.html")
 

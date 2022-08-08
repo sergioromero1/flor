@@ -23,6 +23,9 @@ urlpatterns = [
     path('contact-us/', views.load_contactus, name='contact_us'),
     path('blog/', views.load_blog, name='blog'),
     path('FAQ/', views.load_faq, name='faq'),
+    path('login/', views.load_login, name='login'),
+    path('register/', views.load_register, name='register'),
+    path('my_account/', views.load_myaccount, name='my_account'),
     path('admin/', admin.site.urls),
     path('orders/', include("orders.urls")),
     path('users/', include("users.urls"))
