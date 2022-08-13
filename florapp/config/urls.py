@@ -17,6 +17,7 @@ from cgitb import handler
 from django.contrib import admin
 from django.urls import path, include
 from orders import views
+from users import views as users_views
 
 urlpatterns = [
     path('', views.load_index, name='index'),
@@ -28,9 +29,10 @@ urlpatterns = [
     path('contact-us/', views.load_contactus, name='contact_us'),
     path('error-404/', views.load_error_404, name='error-404'),
     path('FAQ/', views.load_faq, name='faq'),
-    path('login/', views.load_login, name='login'),
+    path('login/', users_views.LoginView.as_view(), name='login'),
+    path("logout/",users_views.LogoutView.as_view(), name="logout"),
     path('my_account/', views.load_myaccount, name='my_account'),
-    path('register/', views.load_register, name='register'),
+    path('register/', users_views.SignUpView.as_view(), name='register'),
     path("shop/",views.load_shop, name="shop"),
     path('whislist/', views.load_whislist, name='whislist'),
     path('admin/', admin.site.urls),

@@ -28,14 +28,18 @@
                     <div class="section-content text-center mb-5">
                         <h2 class="title-4 mb-2">Login</h2>
                         <p class="desc-content">Please login using account detail bellow.</p>
+                        {% if form.errors %}
+                            <div style="color:red">{{form.non_field_errors}}</div>
+                        {%endif%}
                     </div>
-                    <form action="{% url 'users:login' %}" method="post">
+                    
+                    <form action="{% url 'login' %}" method="post">
                         {% csrf_token %}
                         <div class="single-input-item mb-3">
-                            <input type="email" placeholder="Email or Username">
+                            <input type="text" placeholder="Username" name="username">
                         </div>
                         <div class="single-input-item mb-3">
-                            <input type="password" placeholder="Enter your Password">
+                            <input type="password" placeholder="Enter your Password" name="password">
                         </div>
                         <div class="single-input-item mb-3">
                             <div class="login-reg-form-meta d-flex align-items-center justify-content-between">

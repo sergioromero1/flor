@@ -4,6 +4,8 @@ from users.models import User
 
 class SignUpForm(forms.Form):
 
+    first_name = forms.CharField(min_length= 2, max_length=15)
+    last_name = forms.CharField(min_length= 2, max_length=15)
     username = forms.CharField(min_length= 4, max_length=15)
     email = forms.CharField(min_length=6,max_length=50,widget = forms.EmailInput())
     password = forms.CharField(max_length=70 , widget=forms.PasswordInput())
