@@ -88,6 +88,10 @@ def load_shop(request):
 def load_whislist(request):
     return render(request,"orders/error-404.html")
 
+def load_product(request):
+    return render(request,"orders/product-details.html")
+
+
 def prueba(request):
     return render(request,"orders/prueba.html")
 
