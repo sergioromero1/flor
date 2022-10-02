@@ -1,0 +1,55 @@
+{% extends 'orders/base.html' %}
+{% load static %}
+
+{% block head_content %}
+<title>Listado de Ordenes</title>
+{% endblock %}
+
+{% block container %}
+    <link rel="stylesheet" href="{% static 'orders/index.css' %}">
+    <header><h1>Listado de Ordenes</h1></header>
+    <nav class="nav_menu">
+        <ul>
+            <li>
+                <a class="{{ context.todas }}" href="{% url 'orders:index' %}">Todas</a>
+            </li>
+            <li>
+                <a class="{{ context.Activo }}" href="{% url 'orders:index' 'Activo' %}"> Activas</a>
+            </li>
+            <li>
+                <a class="{{ context.Cancelado }}" href="{% url 'orders:index' 'Cancelado' %}">Canceladas</a>
+            </li>
+            <li>
+                {% comment %} <a class="{{ context.Despachado }}" href="{% url 'orders:index' 'Despachado' %}">Despachadas</a> {% endcomment %}
+            </li>
+            <li>
+                <a class="{{ context.Entregado }}" href="{% url 'orders:index' 'Entregado' %}">Entregadas</a>
+            </li>
+            
+        </ul>
+    </nav>
+    <main>
+        
+        {% if context.latest_orders_list %}
+        
+            <ul class="ul_index">
+            {% for order in context.latest_orders_list  %}
+                <fieldset>
+                    <li class="li_index">
+                        <a href="{% url 'orders:detail' order.id %}">
+                            Orden #{{ order.id }}<br>
+                            <p>{{order.units}} unidades de {{order.flower.name}}</p>
+                        </a>
+                    </li>
+                </fieldset>
+            {% endfor %}
+            </ul>
+         
+        {% else %}
+            <p>No orders are available.</p>
+        {% endif %}
+    </main>
+    
+{% endblock%}
+
+

@@ -1,0 +1,139 @@
+{% extends 'orders/base.html' %}
+{% load static %}
+
+{% block container %}
+
+<!-- Breadcrumb Area Start Here -->
+<div class="breadcrumbs-area position-relative">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="breadcrumb-content position-relative section-content">
+                    <h3 class="title-3">Compare</h3>
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>Compare</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcrumb Area End Here -->
+<!-- Compare Area Start Here -->
+<div class="compare-area mt-no-text mb-no-text">
+    <div class="container container-default-2 custom-area">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- Compare Page Content Start -->
+                <div class="compare-page-content-wrap">
+                    <div class="compare-table table-responsive">
+                        <table class="table table-bordered mb-0">
+                            <tbody>
+                                <tr>
+                                    <td class="first-column">Product</td>
+                                    <td class="product-image-title">
+                                        <a href="product-details.html" class="image">
+                                            <img class="img-fluid" src="{% static 'orders/assets/images/product/small-size/1.jpg' %}" alt="Compare Product">
+                                        </a>
+                                        <a href="#" class="category">White</a>
+                                        <a href="product-details.html" class="title">Rose bouquet white</a>
+                                    </td>
+                                    <td class="product-image-title">
+                                        <a href="product-details.html" class="image">
+                                            <img class="img-fluid" src="{% static 'orders/assets/images/product/small-size/2.jpg'%}" alt="Compare Product">
+                                        </a>
+                                        <a href="#" class="category">Green</a>
+                                        <a href="product-details.html" class="title">Jack in the Pulpit</a>
+                                    </td>
+                                    <td class="product-image-title">
+                                        <a href="product-details.htmll" class="image">
+                                            <img class="img-fluid" src="{% static 'orders/assets/images/product/small-size/3.jpg' %}" alt="Compare Product">
+                                        </a>
+                                        <a href="#" class="category">Red</a>
+                                        <a href="product-details.html" class="title">Orchid flower red stick</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Description</td>
+                                    <td class="pro-desc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident nulla, explicabo iste a rerum pariatur.</p>
+                                    </td>
+                                    <td class="pro-desc">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sit commodi obcaecati cumque consectetur alias incidunt?</p>
+                                    </td>
+                                    <td class="pro-desc">
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius,facere. Fuga asperiores inventore iste tempora.</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Price</td>
+                                    <td class="pro-price">$295</td>
+                                    <td class="pro-price">$275</td>
+                                    <td class="pro-price">$395</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Color</td>
+                                    <td class="pro-color">White</td>
+                                    <td class="pro-color">Green</td>
+                                    <td class="pro-color">Red</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Stock</td>
+                                    <td class="pro-stock">In Stock</td>
+                                    <td class="pro-stock">Stock Out</td>
+                                    <td class="pro-stock">In Stock</td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Add to cart</td>
+                                    <td><a href="cart.html" class="btn product-cart button-icon flosun-button dark-btn">Add to Cart</a></td>
+                                    <td><a href="cart.html" class="btn product-cart button-icon flosun-button dark-btn disabled">Add to Cart</a></td>
+                                    <td><a href="cart.html" class="btn product-cart button-icon flosun-button dark-btn">Add to Cart</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Rating</td>
+                                    <td class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </td>
+                                    <td class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </td>
+                                    <td class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="first-column">Remove</td>
+                                    <td class="pro-remove">
+                                        <button><i class="lnr lnr-trash"></i></button>
+                                    </td>
+                                    <td class="pro-remove">
+                                        <button><i class="lnr lnr-trash"></i></button>
+                                    </td>
+                                    <td class="pro-remove">
+                                        <button><i class="lnr lnr-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Compare Page Content End -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Compare Area End Here -->
+{% endblock %}
